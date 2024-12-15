@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "Be Vietnam Pro", sans-serif;
+    src: url("../fonts/BeVietnamPro-Regular.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Be Vietnam Pro", sans-serif;
+    src: url("../fonts/BeVietnamPro-Medium.woff") format("woff");
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Be Vietnam Pro", sans-serif;
+    src: url("../fonts/BeVietnamPro-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Be Vietnam Pro", sans-serif;
+    src: url("../fonts/BeVietnamPro-Bold.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Be Vietnam Pro", sans-serif;
+    src: url("../fonts/BeVietnamPro-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter", sans-serif;
+    src: url("../fonts/Inter24pt-Regular.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter", sans-serif;
+    src: url("../fonts/Inter24pt-Medium.woff") format("woff");
+    font-weight: 500;
+    font-display: swap;
+}
+
+:root {
+    --color-orange: #ff9500;
+
+    --container-width: 1596px;
+    --container-padding: 15px;
+}
+
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding) * 2);
+}
