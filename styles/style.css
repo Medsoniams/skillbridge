@@ -1,59 +1,428 @@
-@font-face {
-    font-family: "Be Vietnam Pro", sans-serif;
-    src: url("../fonts/BeVietnamPro-Regular.woff") format("woff");
-    font-weight: 400;
-    font-display: swap;
-}
+/*@font-face {*/
+/*    font-family: "Be Vietnam Pro", sans-serif;*/
+/*    src: url("../fonts/BeVietnamPro-Regular.woff") format("woff");*/
+/*    font-weight: 400;*/
+/*    font-display: swap;*/
+/*}*/
 
-@font-face {
-    font-family: "Be Vietnam Pro", sans-serif;
-    src: url("../fonts/BeVietnamPro-Medium.woff") format("woff");
-    font-weight: 500;
-    font-display: swap;
-}
+/*@font-face {*/
+/*    font-family: "Be Vietnam Pro", sans-serif;*/
+/*    src: url("../fonts/BeVietnamPro-Medium.woff") format("woff");*/
+/*    font-weight: 500;*/
+/*    font-display: swap;*/
+/*}*/
 
-@font-face {
-    font-family: "Be Vietnam Pro", sans-serif;
-    src: url("../fonts/BeVietnamPro-SemiBold.woff") format("woff");
-    font-weight: 600;
-    font-display: swap;
-}
+/*@font-face {*/
+/*    font-family: "Be Vietnam Pro", sans-serif;*/
+/*    src: url("../fonts/BeVietnamPro-SemiBold.woff") format("woff");*/
+/*    font-weight: 600;*/
+/*    font-display: swap;*/
+/*}*/
 
-@font-face {
-    font-family: "Be Vietnam Pro", sans-serif;
-    src: url("../fonts/BeVietnamPro-Bold.woff") format("woff");
-    font-weight: 700;
-    font-display: swap;
-}
+/*@font-face {*/
+/*    font-family: "Be Vietnam Pro", sans-serif;*/
+/*    src: url("../fonts/BeVietnamPro-Bold.woff") format("woff");*/
+/*    font-weight: 700;*/
+/*    font-display: swap;*/
+/*}*/
 
-@font-face {
-    font-family: "Be Vietnam Pro", sans-serif;
-    src: url("../fonts/BeVietnamPro-ExtraBold.woff") format("woff");
-    font-weight: 800;
-    font-display: swap;
-}
+/*@font-face {*/
+/*    font-family: "Be Vietnam Pro", sans-serif;*/
+/*    src: url("../fonts/BeVietnamPro-ExtraBold.woff") format("woff");*/
+/*    font-weight: 800;*/
+/*    font-display: swap;*/
+/*}*/
 
-@font-face {
-    font-family: "Inter", sans-serif;
-    src: url("../fonts/Inter24pt-Regular.woff") format("woff");
-    font-weight: 400;
-    font-display: swap;
-}
+/*@font-face {*/
+/*    font-family: "Inter", sans-serif;*/
+/*    src: url("../fonts/Inter24pt-Regular.woff") format("woff");*/
+/*    font-weight: 400;*/
+/*    font-display: swap;*/
+/*}*/
 
-@font-face {
-    font-family: "Inter", sans-serif;
-    src: url("../fonts/Inter24pt-Medium.woff") format("woff");
-    font-weight: 500;
-    font-display: swap;
-}
+/*@font-face {*/
+/*    font-family: "Inter", sans-serif;*/
+/*    src: url("../fonts/Inter24pt-Medium.woff") format("woff");*/
+/*    font-weight: 500;*/
+/*    font-display: swap;*/
+/*}*/
 
 :root {
-    --color-orange: #ff9500;
+    --color-white95: #F1F1F3;
+    --color-white97: #F7F7F8;
+    --color-white99: #FCFCFD;
+    --color-orange50: #ff9500;
+    --color-grey10: #1A1A1A;
+    --color-grey15: #262626;
+    --color-grey20: #333333;
+    --color-grey30: #4C4C4D;
+    --color-grey35: #59595A;
 
-    --container-width: 1596px;
+    --container-width: 1597px;
     --container-padding: 15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--color-grey15);
+    background-color: var(--color-white97);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
 }
 
 .container {
     max-width: calc(var(--container-width) + var(--container-padding) * 2);
+    padding-inline: var(--container-padding);
+    margin-inline: auto;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+
+    margin-top: 20px;
+    padding: 20px 0 24px 0;
+
+    border-bottom: 1px solid var(--color-white95);
+}
+
+.header__logo-link {
+    margin-right: 50px;
+}
+
+.header__menu {
+    margin-right: auto;
+}
+
+.header__menu-list {
+    display: flex;
+    align-items: center;
+    column-gap: 26px;
+}
+
+.header__menu-link {
+    display: inline-flex;
+    align-items: center;
+    height: 55px;
+}
+
+.header__menu-link.active {
+    padding: 14px 24px;
+
+    background-color: var(--color-white95);
+    border-radius: 8px;
+}
+
+.authorization {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.header__signup {
+    display: inline-flex;
+    align-items: center;
+    height: 55px;
+}
+
+.header__login {
+    padding: 14px 34px;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: var(--color-orange50);
+
+    color: #fff;
+
+    transition: .2s background-color;
+}
+
+.header__login:hover {
+    color: var(--color-grey15);
+    border: 1px solid var(--color-orange50);
+    background-color: transparent;
+}
+
+.hero__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-top: 155px;
+}
+
+
+.hero__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    padding: 14px 30px 14px 20px;
+
+    background-color: var(--color-white99);
+    border: 1px solid var(--color-white95);
+    border-radius: 11px;
+}
+
+.hero__title svg {
+    position: absolute;
+    top: -30px;
+    left: -24px;
+}
+
+
+.hero__title-main {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.hero__title-main span {
+    color: var(--color-orange50);
+}
+
+.hero__title-description {
+    font-size: 38px;
+    font-weight: 500;
+
+    margin-top: 20px;
+}
+
+.hero__description-text {
+    margin-top: 10px;
+}
+
+.hero__title-link {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+.hero__link-courses {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+
+    padding: 18px 24px;
+
+    color: #fff;
+    background-color: var(--color-orange50);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: .2s;
+}
+
+.hero__link-courses:hover {
+    color: var(--color-grey15);
+    border: 1px solid var(--color-orange50);
+    background-color: transparent;
+}
+
+.hero__link-pricing {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+
+    padding: 18px 24px;
+
+    color: var(--color-grey15);
+    background-color: #fff;
+    border: 1px solid var(--color-white95);
+    border-radius: 8px;
+}
+
+.companies {
+    background-color: var(--color-white99);
+    border: 1px solid var(--color-white95);
+    border-radius: 12px;
+
+    padding: 30px;
+}
+
+.companies__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.companies__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 94px;
+}
+
+.companies__item:nth-child(n+2):nth-child(-n+6) {
+    border-right: 1px solid var(--color-white95);
+    border-left: 1px solid var(--color-white95);
+}
+
+.companies img {
+    max-width: 100%; /* масштабируем изображение по контейнеру */
+    height: auto;
+}
+
+.video__preview {
+    position: relative;
+    margin-top: 100px;
+
+}
+
+.video__preview-video {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.video__preview-button {
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: none;
+    background-color: transparent;
+}
+
+.video__preview-button:hover {
+    cursor: pointer;
+}
+
+.benefits {
+    margin-top: 150px;
+}
+
+.benefits-text {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+}
+
+.benefits-left {
+    max-width: 1177px;
+}
+
+.benefits__title {
+    color: var(--color-grey15);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.benefits__description {
+    margin-top: 6px;
+
+    color: var(--color-grey35);
+}
+
+.benefits__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 24px 18px 24px;
+    font-weight: 500;
+
+    background-color: var(--color-white99);
+    border: 1px solid var(--color-white95);
+    border-radius: 8px;
+
+    white-space: nowrap;
+}
+
+.benefits__cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    margin-top: 80px;
+}
+
+.benefits__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 437px;
+    flex: 1 1 519px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 50px;
+}
+
+.benefits__card-number {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: right;
+
+    margin-bottom: 50px;
+
+    color: var(--color-grey15);
+}
+
+.benefits__card-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+    text-align: left;
+    color: var(--color-grey20);
+
+    margin-bottom: 14px;
+}
+
+.benefits__card-description {
+    color: var(--color-grey30);
+}
+
+.benefits__card-link {
+    position: absolute;
+    bottom: 50px;
+    display: inline-flex;
+    align-items: center;
+
+    align-self: flex-end;
+
+    padding: 20px;
+
+    background-color: var(--color-white99);
+    border: 1px solid var(--color-white95);
+    border-radius: 8px;
 }
